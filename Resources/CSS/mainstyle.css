@@ -1,7 +1,7 @@
 body, html {
 	height:98.5%;
 	width:99.6%;
-	background-image:url(../Pictures/background.jpg);
+	
 	background-repeat:no-repeat;
 	background-size: cover;
 	background-position: middle center;
@@ -21,14 +21,14 @@ body, html {
   	height: 100%;
  }#scroll{
 	height:60%;
-	width:40%;
+	width:35%;
 	top: 0;
 	position: fixed
  }#content{
 	 width:70%;
 	 height:120%;
 	 background-color:#FFFFFF;
-	 border: 2px solid CornFlowerBlue;
+	 
 	 border-radius: 25px;
 	 margin:auto;
 	 opacity:0.8;
