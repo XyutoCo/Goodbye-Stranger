@@ -4,6 +4,7 @@
 <head>
 	  <title>Goodbye Stranger</title>
 	  <link rel="stylesheet" type="text/css" media="screen" href="../Resources/CSS/mainstyle.css">
+	  <body onload="back1()">
 </head>
 
 <body>
@@ -24,14 +25,25 @@
 	
 	<a href="information.html"><img src="../Resources/Pictures/information.png" onmouseover="infohover()" onmouseout="offhover()" style="height:12%" width="12%"/></a>
 	<br>
-	<a href="music.html"><img src="../Resources/Pictures/music.png" onmouseover="musihover()" onmouseout="offhover()" style="height:12%" width="12%"/></a>
+	<a href="home.html"><img src="../Resources/Pictures/home.png" onmouseover="musihover()" onmouseout="offhover()" style="height:12%" width="12%"/></a>
 </div>
 		<div id="content">
-<h3>We're Goodbye Stranger - a young band based in London, UK. Our music is guitar-rich synthpop, inspired the shoegaze sounds of the 80s. We take inspiration from the likes of New Order and Peace, to create what we feel is an interesting blend of styles.<img src="../Resources/Pictures/gsplaying.jpg">
-<br><br>
-Having formed in November 2013, we've released two demos to date - Miles Away and Magnolia. Both of these were met with a fantastic response from countless blogs and internet radio stations, and currently have over 4000 listens combined.
-<br><br>
-We've taken to the stage of a number of reputable London venues, including The Borderline, The Barfly and most recently the legendary 100 Club, drawing crowds of up to 80 people.</h3>
+<h3>Here is our latest release, Cave:<br>
+<iframe width="80%" height="450px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/178433113&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe></h3>
 		</div>
+
+<script>
+		function back1(){
+			document.body.style.backgroundImage = "url('../Resources/Pictures/background.jpg')";
+		setTimeout(back2, 5000);
+		}function back2(){
+			document.body.style.backgroundImage = "url('../Resources/Pictures/gsplaying.jpg')";
+		setTimeout(back3, 5000);
+		}function back3(){
+			document.body.style.backgroundImage = "url('../Resources/Pictures/background.jpg')";
+		setTimeout(back1, 1);
+		}
+		
+</script>
 
 </body></html>
