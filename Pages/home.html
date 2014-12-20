@@ -4,12 +4,12 @@
 <head>
 	  <title>Goodbye Stranger</title>
 	  <link rel="stylesheet" type="text/css" media="screen" href="../Resources/CSS/mainstyle.css">
-	  <body onload="back1()">
+	  
 </head>
 
 <body>
 
-
+<div id="container" onmouseover="openPlayer()">
 <div id="maindiv">
 	<div id="title">
 		<h1>Goodbye Stranger</h1>
@@ -35,7 +35,15 @@
 		
 
 </div>
-<iframe width="0%" height="0" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/178433113&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+
+
+<div id="playerControl">
+<img src="../Resources/Pictures/play.png" onclick="openPlayer()" height="100%">
+<img src="../Resources/Pictures/pause.png" onclick="closePlayer()" height="100%">
+
+</div>
+</div>
+
 <script>
 function offhover(){
 document.getElementById("letter").innerHTML = "<h2>Stay in Touch</h2>";
@@ -54,7 +62,13 @@ document.getElementById("letter").innerHTML = "<h2>Spotify</h2>";
 document.getElementById("letter").innerHTML = "<h2>Information</h2>";
 }function musihover(){
 document.getElementById("letter").innerHTML = "<h2>Music</h2>";
-}function back1(){
+}
+//begin all functions
+function beginAll(){
+	setTimeout(back1,0);
+}
+//Background Picture gallery
+function back1(){
 	document.body.style.backgroundImage = "url('../Resources/Pictures/background.jpg')";
 	document.body.style.backgroundPosition="top left<em></em>"; 
 setTimeout(back2, 5000);
@@ -65,8 +79,21 @@ setTimeout(back3, 5000);
 	document.body.style.backgroundImage = "url('../Resources/Pictures/background.jpg')";
 setTimeout(back1, 1);
 }
+//player  code
+function openPlayer() {
+    soundPlayer = window.open("play.html", "myWindow", "width=10, height=10");    
+}function closePlayer() {
+    soundPlayer.close();
+}
+var executed = false;
+function onhoverCall(){
+	if(!onhoverCall){
+		onhoverCall = true
+		setTimeout(openPlayer,0)
+	}
+	
+}
 </script>
-
-
-
+	  <body onload="beginAll()">
+		 
 </body></html>
